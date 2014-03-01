@@ -1,0 +1,14 @@
+<div ng-controller="ThreadctrlCtrl">
+  <div class= 'header'>
+    threads
+  </div>
+  <div class = "threads">
+    <div ng-repeat= "(id, thread) in threads" class="head"> {{id}} {{thread.body}} ></body>
+      <div ng-repeat ="reply in currentThread" class="replies">{{reply.body.reply}}</div>
+      <textarea ng-model="newReply" ng-keydown="addReply($event, id)"></textarea>
+    </div>
+  </div>
+  <div>
+    <textarea ng-model="newThread" ng-keydown="addThread($event)"></textarea>
+  </div>
+</div>
